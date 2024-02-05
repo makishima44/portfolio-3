@@ -22,7 +22,7 @@ export const Experience = () => {
             Developer and Designer, specialized in
             <br /> UI/UX and Web Developer
           </SpecializedTitle>
-          <FlexWrapper gap="15px">
+          <FlexWrapper gap="15px" wrap="wrap">
             <SpecializedBlock>
               <Icon
                 iconId="computer"
@@ -70,9 +70,10 @@ export const Experience = () => {
 
 const StyledExpirience = styled.section`
   padding: 100px 0;
-  background: rgba(34, 42, 54, 0.95);
+  background: rgb(34, 42, 54);
   min-height: 100%;
 `;
+
 const ExpirienceTitle = styled.h2``;
 
 const SpecializedContainer = styled.div``;
@@ -86,4 +87,5 @@ const SpecializedBlock = styled.div`
   width: 290px;
   height: 300px;
 `;
+
 const SpecializedText = styled.span``;

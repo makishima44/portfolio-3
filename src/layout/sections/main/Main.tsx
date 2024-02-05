@@ -7,7 +7,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 export const Main = () => {
   return (
     <StyledMain>
-      <FlexWrapper justify="space-between">
+      <FlexWrapper justify="space-between" wrap="wrap">
         {" "}
         <About>
           <AboutMainTitle>
@@ -36,7 +36,9 @@ export const Main = () => {
             <AboutMainLink>Download CV</AboutMainLink>
           </AboutMainButton>
         </About>
-        <MainPhoto src={mainPhoto} />
+        <PhotoContainer>
+          <MainPhoto src={mainPhoto} />
+        </PhotoContainer>
       </FlexWrapper>
     </StyledMain>
   );
@@ -65,5 +67,11 @@ const AboutMainButton = styled.button`
 const AboutMainLink = styled.a``;
 
 const MainPhoto = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
+const PhotoContainer = styled.div`
   width: 50%;
 `;
