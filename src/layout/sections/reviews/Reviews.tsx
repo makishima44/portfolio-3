@@ -80,6 +80,8 @@ const StatisticsContainer = styled.div`
 
 const StatisticsBlock = styled.div``;
 
-const StatisticsTitle = styled.span``;
+const StatisticsTitle = styled.span`
+  display: block;
+`;
 
 const StatisticsNumber = styled.span``;
