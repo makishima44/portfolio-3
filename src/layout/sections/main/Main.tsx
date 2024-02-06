@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import { Icon } from "../../../components/icon/Icon";
 import mainPhoto from "./../../../assets/images/Rectangle 3.jpeg";
 import { FlexWrapper } from "../../../components/FlexWrapper";
+import { Contrainer } from "../../../components/Container";
 
 export const Main = () => {
   return (
@@ -51,6 +52,8 @@ const StyledMain = styled.section`
 const About = styled.div`
   background: rgba(34, 42, 54, 0.95);
   width: 50%;
+  text-align: center;
+  padding-top: 100px;
 `;
 
 const AboutMainTitle = styled.h1``;
@@ -60,8 +63,6 @@ const AboutMainText = styled.p``;
 const AboutMainButton = styled.button`
   background-color: red;
   background-color: transparent;
-  cursor: pointer;
-  border: none;
 `;
 
 const AboutMainLink = styled.a``;

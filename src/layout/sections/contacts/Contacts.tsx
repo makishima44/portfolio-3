@@ -33,9 +33,9 @@ export const Contacts = () => {
 
         <SocialLinksBlock>
           {" "}
-          {SocialLinks.map((s) => {
+          {SocialLinks.map((s, index) => {
             return (
-              <a href="">
+              <a key={index} href="#">
                 <Icon
                   iconId={s.iconId}
                   width="25"

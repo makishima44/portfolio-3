@@ -22,10 +22,15 @@ body {
 
 a {
   text-decoration:none;
+  cursor: pointer;
 }
 
 ul {
     list-style:none;
 }
 
+button {
+  border: none;
+ 
+}
 `;

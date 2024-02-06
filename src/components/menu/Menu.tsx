@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
+import { theme } from "../../styles/Themes";
 
 export const Menu = () => {
   return (
@@ -22,6 +23,12 @@ export const Menu = () => {
 const NavMenu = styled.nav`
   ul {
     display: flex;
-    gap: 20px;
+    gap: 50px;
+
+    & a {
+      color: ${theme.mainFont};
+      font-size: 20px;
+      font-weight: 500;
+    }
   }
 `;
