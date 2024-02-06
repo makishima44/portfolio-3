@@ -2,68 +2,71 @@ import React from "react";
 import { styled } from "styled-components";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Icon } from "../../../components/icon/Icon";
+import { Contrainer } from "../../../components/Container";
 
 export const Experience = () => {
   return (
     <StyledExpirience>
-      <FlexWrapper justify="space-between">
-        {" "}
-        <ExpirienceTitle>
-          4 +
-          <br />
-          Years
-          <br />
-          Experience
-          <br />
-          Working
-        </ExpirienceTitle>
-        <SpecializedContainer>
-          <SpecializedTitle>
-            Developer and Designer, specialized in
-            <br /> UI/UX and Web Developer
-          </SpecializedTitle>
-          <FlexWrapper gap="15px" wrap="wrap">
-            <SpecializedBlock>
-              <Icon
-                iconId="computer"
-                width="30"
-                height="30"
-                viewBox="0 0 30 30 "
-              />
-              <SpecializedText>
-                Front End
-                <br /> Developer
-              </SpecializedText>
-            </SpecializedBlock>
+      <Contrainer>
+        <FlexWrapper justify="space-between">
+          {" "}
+          <ExpirienceTitle>
+            4 +
+            <br />
+            Years
+            <br />
+            Experience
+            <br />
+            Working
+          </ExpirienceTitle>
+          <SpecializedContainer>
+            <SpecializedTitle>
+              Developer and Designer, specialized in
+              <br /> UI/UX and Web Developer
+            </SpecializedTitle>
+            <FlexWrapper gap="15px" wrap="wrap">
+              <SpecializedBlock>
+                <Icon
+                  iconId="computer"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30 "
+                />
+                <SpecializedText>
+                  Front End
+                  <br /> Developer
+                </SpecializedText>
+              </SpecializedBlock>
 
-            <SpecializedBlock>
-              <Icon
-                iconId="paint"
-                width="30"
-                height="30"
-                viewBox="0 0 30 30 "
-              />
-              <SpecializedText>
-                Front End
-                <br /> Developer
-              </SpecializedText>
-            </SpecializedBlock>
+              <SpecializedBlock>
+                <Icon
+                  iconId="paint"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30 "
+                />
+                <SpecializedText>
+                  Front End
+                  <br /> Developer
+                </SpecializedText>
+              </SpecializedBlock>
 
-            <SpecializedBlock>
-              <Icon
-                iconId="lighting"
-                width="30"
-                height="30"
-                viewBox="0 0 30 30 "
-              />
-              <SpecializedText>
-                Front End
-                <br /> Developer
-              </SpecializedText>
-            </SpecializedBlock>
-          </FlexWrapper>
-        </SpecializedContainer>
-      </FlexWrapper>
+              <SpecializedBlock>
+                <Icon
+                  iconId="lighting"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30 "
+                />
+                <SpecializedText>
+                  Front End
+                  <br /> Developer
+                </SpecializedText>
+              </SpecializedBlock>
+            </FlexWrapper>
+          </SpecializedContainer>
+        </FlexWrapper>
+      </Contrainer>
     </StyledExpirience>
   );
 };

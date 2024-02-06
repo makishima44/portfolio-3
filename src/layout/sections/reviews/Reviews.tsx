@@ -3,51 +3,56 @@ import { styled } from "styled-components";
 import reviewPhoto from "./../../../assets/images/unsplash_6anudmpILw4.jpeg";
 import { Icon } from "../../../components/icon/Icon";
 import { FlexWrapper } from "../../../components/FlexWrapper";
+import { Contrainer } from "../../../components/Container";
 
 export const Reviews = () => {
   return (
     <StyledReviews>
-      <FlexWrapper justify="space-between">
-        <ReviewContainer>
-          <ReviewPhotoContainer>
-            <ReviewPhoto src={reviewPhoto} />
-          </ReviewPhotoContainer>
+      <Contrainer>
+        {" "}
+        <FlexWrapper justify="space-between">
+          <ReviewContainer>
+            <ReviewPhotoContainer>
+              <ReviewPhoto src={reviewPhoto} />
+            </ReviewPhotoContainer>
 
-          <ReviewTextContainer>
-            <Icon iconId="quotation-marks" />
-            <ReviewText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-              turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-              nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-              tellus elit sed risus. Maecenas eget condimentum velit, sit amet
-              feugiat lectus. Class aptent taciti sociosqu ad litora torquent{" "}
-            </ReviewText>
-            <Icon iconId="arrow-left" /> <Icon iconId="arrow-right" />
-          </ReviewTextContainer>
-        </ReviewContainer>
-        <StatisticsContainer>
-          <StatisticsBlock>
-            <StatisticsTitle>
-              Satisfaction
-              <br />
-              Clients
-            </StatisticsTitle>
-            <StatisticsNumber>100 %</StatisticsNumber>
-          </StatisticsBlock>
-          <StatisticsBlock>
-            <StatisticsTitle>
-              Clients On
-              <br />
-              Worldwide
-            </StatisticsTitle>
-            <StatisticsNumber>+ 80</StatisticsNumber>
-          </StatisticsBlock>
-          <StatisticsBlock>
-            <StatisticsTitle>Projects Done</StatisticsTitle>
-            <StatisticsNumber>743</StatisticsNumber>
-          </StatisticsBlock>
-        </StatisticsContainer>
-      </FlexWrapper>
+            <ReviewTextContainer>
+              <Icon iconId="quotation-marks" />
+              <ReviewText>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
+                metus nec fringilla accumsan, risus sem sollicitudin lacus, ut
+                interdum tellus elit sed risus. Maecenas eget condimentum velit,
+                sit amet feugiat lectus. Class aptent taciti sociosqu ad litora
+                torquent{" "}
+              </ReviewText>
+              <Icon iconId="arrow-left" /> <Icon iconId="arrow-right" />
+            </ReviewTextContainer>
+          </ReviewContainer>
+          <StatisticsContainer>
+            <StatisticsBlock>
+              <StatisticsTitle>
+                Satisfaction
+                <br />
+                Clients
+              </StatisticsTitle>
+              <StatisticsNumber>100 %</StatisticsNumber>
+            </StatisticsBlock>
+            <StatisticsBlock>
+              <StatisticsTitle>
+                Clients On
+                <br />
+                Worldwide
+              </StatisticsTitle>
+              <StatisticsNumber>+ 80</StatisticsNumber>
+            </StatisticsBlock>
+            <StatisticsBlock>
+              <StatisticsTitle>Projects Done</StatisticsTitle>
+              <StatisticsNumber>743</StatisticsNumber>
+            </StatisticsBlock>
+          </StatisticsContainer>
+        </FlexWrapper>
+      </Contrainer>
     </StyledReviews>
   );
 };

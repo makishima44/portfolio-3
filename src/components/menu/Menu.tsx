@@ -29,6 +29,10 @@ const NavMenu = styled.nav`
       color: ${theme.mainFont};
       font-size: 20px;
       font-weight: 500;
+
+      &:hover {
+        background-color: rgb(103, 108, 219);
+      }
     }
   }
 `;

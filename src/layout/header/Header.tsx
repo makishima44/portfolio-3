@@ -28,15 +28,19 @@ const StyledHeader = styled.header`
   top: 0;
   right: 0;
   left: 0;
+  z-index: 1000;
 `;
 const StyledButton = styled.button`
   width: 160px;
   height: 50px;
-  background-color: rgb(103, 108, 219);
-
+  background-color: transparent;
   a {
     color: ${theme.mainFont};
     font-size: 20px;
     font-weight: 500;
+  }
+
+  &:hover {
+    background-color: rgb(103, 108, 219);
   }
 `;
