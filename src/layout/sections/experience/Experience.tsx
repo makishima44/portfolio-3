@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { styled } from "styled-components";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Icon } from "../../../components/icon/Icon";
 import { Contrainer } from "../../../components/Container";
+import { theme } from "../../../styles/Themes";
 
 export const Experience = () => {
   return (
@@ -11,7 +12,7 @@ export const Experience = () => {
         <FlexWrapper justify="space-between">
           {" "}
           <ExpirienceTitle>
-            4 +
+            <ExpirienceTitleNumber>4 +</ExpirienceTitleNumber>
             <br />
             Years
             <br />
@@ -24,6 +25,7 @@ export const Experience = () => {
               Developer and Designer, specialized in
               <br /> UI/UX and Web Developer
             </SpecializedTitle>
+
             <FlexWrapper gap="15px" wrap="wrap">
               <SpecializedBlock>
                 <Icon
@@ -43,11 +45,11 @@ export const Experience = () => {
                   iconId="paint"
                   width="30"
                   height="30"
-                  viewBox="0 0 30 30 "
+                  viewBox="0 0 30 30"
                 />
                 <SpecializedText>
-                  Front End
-                  <br /> Developer
+                  UI/UX
+                  <br /> Designer
                 </SpecializedText>
               </SpecializedBlock>
 
@@ -59,8 +61,8 @@ export const Experience = () => {
                   viewBox="0 0 30 30 "
                 />
                 <SpecializedText>
-                  Front End
-                  <br /> Developer
+                  Branding
+                  <br /> Designer
                 </SpecializedText>
               </SpecializedBlock>
             </FlexWrapper>
@@ -74,21 +76,56 @@ export const Experience = () => {
 const StyledExpirience = styled.section`
   padding: 100px 0;
   background: rgb(34, 42, 54);
-  min-height: 100%;
+  height: 100%;
 `;
 
-const ExpirienceTitle = styled.h2``;
+const ExpirienceTitle = styled.h2`
+  padding-top: 90px;
+  font-family: "Playfair Display";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 180%;
+  color: ${theme.mainFont};
+`;
+
+const ExpirienceTitleNumber = styled.span`
+  font-size: 100px;
+  color: #676cdb;
+`;
 
 const SpecializedContainer = styled.div``;
 
-const SpecializedTitle = styled.h2``;
+const SpecializedTitle = styled.h2`
+  text-align: center;
+  font-family: Poppins;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 180%;
+  color: ${theme.mainFont};
+  margin-bottom: 20px;
+`;
 
 const SpecializedBlock = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   background: rgb(196, 196, 196);
   width: 290px;
   height: 300px;
+  padding-left: 30px;
+  padding-bottom: 35px;
+  color: #222a36;
+
+  &:hover {
+    background: rgb(103, 108, 219);
+    color: ${theme.mainFont};
+  }
 `;
 
-const SpecializedText = styled.span``;
+const SpecializedText = styled.span`
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0%;
+  padding-top: 10px;
+`;

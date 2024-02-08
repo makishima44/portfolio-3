@@ -28,6 +28,7 @@ const NavMenu = styled.nav`
     & a {
       color: ${theme.mainFont};
       font-size: 20px;
+
       font-weight: 500;
 
       &:hover {

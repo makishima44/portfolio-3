@@ -10,14 +10,13 @@ export const Main = () => {
   return (
     <StyledMain>
       <FlexWrapper justify="space-between" wrap="wrap">
-        <Contrainer>
-          <About>
+        <BGroundBlock>
+          <MainBlock>
             <AboutMainTitle>
               Hello!
               <br />
               I’m Zarror Nibors
             </AboutMainTitle>
-
             <AboutMainText>
               I’am freelance web developer based in
               <br /> Indonesia who loves to craft attractive
@@ -36,9 +35,8 @@ export const Main = () => {
               />
               <a href="">Download CV</a>
             </AboutMainButton>
-          </About>
-        </Contrainer>
-        <BackGroundBlock></BackGroundBlock>
+          </MainBlock>
+        </BGroundBlock>
         <PhotoContainer>
           <MainPhoto src={mainPhoto} />
         </PhotoContainer>
@@ -48,21 +46,30 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-  position: relative;
   height: 100%;
   background: rgba(34, 42, 54, 0.95);
+  position: relative;
 `;
 
-const BackGroundBlock = styled.div`
+const BGroundBlock = styled.div`
   width: 50%;
   background: rgba(34, 42, 54, 0.95);
 `;
 
 const AboutMainTitle = styled.h1`
+  font-family: "Playfair Display";
   font-size: 90px;
   font-weight: 700;
   line-height: 120%;
   color: ${theme.mainFont};
+
+  @media (max-width: 1200px) {
+    font-size: calc(90px / 1.5);
+  }
+
+  @media (max-width: 980px) {
+    font-size: calc(90px / 2);
+  }
 `;
 
 const AboutMainText = styled.p`
@@ -101,8 +108,8 @@ const PhotoContainer = styled.div`
   width: 50%;
 `;
 
-const About = styled.div`
+const MainBlock = styled.div`
+  top: 20%;
+  left: 8%;
   position: absolute;
-  top: 30%;
-  max-height: 200px;
 `;
