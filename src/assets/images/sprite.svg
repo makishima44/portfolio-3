@@ -43,8 +43,8 @@
 
 <g id="download">
 
-	<path id="Vector" d="M10 12.5L10 2.5L10 12.5M13.3334 9.16675L10 12.5L6.66669 9.16675L10 12.5" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round"/>
-	<path id="Vector" d="M1.66669 14.1667L2.18419 16.2375C2.27431 16.5981 2.48238 16.9182 2.7753 17.147C3.06822 17.3757 3.4292 17.5 3.80086 17.5L16.1992 17.5C16.5708 17.5 16.9318 17.3757 17.2247 17.147C17.5177 16.9182 17.7257 16.5981 17.8159 16.2375L18.3334 14.1667" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+	<path id="Vector" d="M9.33463 11L9.33463 1L9.33463 11M12.668 7.66675L9.33463 11L6.0013 7.66675L9.33463 11" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" fill="none"/>
+	<path id="Vector" d="M1.0013 12.6667L1.5188 14.7375C1.60892 15.0981 1.81699 15.4182 2.10991 15.647C2.40283 15.8757 2.76381 16 3.13547 16L15.5338 16C15.9055 16 16.2664 15.8757 16.5594 15.647C16.8523 15.4182 17.0603 15.0981 17.1505 14.7375L17.668 12.6667" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
 
 </g>
 
@@ -135,15 +135,15 @@
 <g id="arrow-right">
 
 		<path id="Vector" d="M6.66669 20L33.3334 20" stroke="#676CDB" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
-		<path id="Vector" d="M21.6667 8.33325L33.3334 19.9999L21.6667 31.6666" stroke="#676CDB" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+		<path id="Vector" d="M21.6667 8.33325L33.3334 19.9999L21.6667 31.6666" stroke="#676CDB" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
 
 </g>
 
 
 <g id="arrow-left">
 
-	<path id="Vector" d="M33.3334 20L6.66671 20" stroke="#676CDB" stroke-opacity="0.500000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
-	<path id="Vector" d="M18.3334 31.6667L6.66671 20.0001L18.3334 8.33337" stroke="#676CDB" stroke-opacity="0.500000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+	<path id="Vector" d="M33.3334 20L6.66671 20" stroke="#676CDB" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+	<path id="Vector" d="M18.3334 31.6667L6.66671 20.0001L18.3334 8.33337" stroke="#676CDB" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
 
 </g>
 

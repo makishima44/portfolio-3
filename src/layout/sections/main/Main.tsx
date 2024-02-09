@@ -5,6 +5,7 @@ import mainPhoto from "./../../../assets/images/Rectangle 3.jpeg";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Contrainer } from "../../../components/Container";
 import { theme } from "../../../styles/Themes";
+import { font } from "../../../styles/Common";
 
 export const Main = () => {
   return (
@@ -46,7 +47,7 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-  height: 100%;
+  min-height: 100%;
   background: rgba(34, 42, 54, 0.95);
   position: relative;
 `;
@@ -57,19 +58,13 @@ const BGroundBlock = styled.div`
 `;
 
 const AboutMainTitle = styled.h1`
-  font-family: "Playfair Display";
-  font-size: 90px;
-  font-weight: 700;
-  line-height: 120%;
-  color: ${theme.mainFont};
-
-  @media (max-width: 1200px) {
-    font-size: calc(90px / 1.5);
-  }
-
-  @media (max-width: 980px) {
-    font-size: calc(90px / 2);
-  }
+  ${font({
+    family: '"Playfair Display"',
+    weight: 700,
+    lineHeight: 1.2,
+    Fmax: 90,
+    Fmin: 30,
+  })};
 `;
 
 const AboutMainText = styled.p`
@@ -109,7 +104,7 @@ const PhotoContainer = styled.div`
 `;
 
 const MainBlock = styled.div`
-  top: 20%;
-  left: 8%;
+  top: 24%;
+  right: 35%;
   position: absolute;
 `;
