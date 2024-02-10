@@ -11,7 +11,13 @@ export const Main = () => {
   return (
     <StyledMain>
       <FlexWrapper justify="space-between" wrap="wrap">
-        <BGroundBlock>
+        <BGroundBlock></BGroundBlock>
+        <PhotoContainer>
+          <MainPhoto src={mainPhoto} />
+        </PhotoContainer>
+
+        <Contrainer>
+          {" "}
           <MainBlock>
             <AboutMainTitle>
               Hello!
@@ -37,18 +43,15 @@ export const Main = () => {
               <a href="">Download CV</a>
             </AboutMainButton>
           </MainBlock>
-        </BGroundBlock>
-        <PhotoContainer>
-          <MainPhoto src={mainPhoto} />
-        </PhotoContainer>
+        </Contrainer>
       </FlexWrapper>
     </StyledMain>
   );
 };
 
 const StyledMain = styled.section`
-  min-height: 100%;
-  background: rgba(34, 42, 54, 0.95);
+  min-height: 100hv;
+
   position: relative;
 `;
 
@@ -58,13 +61,20 @@ const BGroundBlock = styled.div`
 `;
 
 const AboutMainTitle = styled.h1`
-  ${font({
-    family: '"Playfair Display"',
-    weight: 700,
-    lineHeight: 1.2,
-    Fmax: 90,
-    Fmin: 30,
-  })};
+  font-size: 90px;
+  font-family: "Playfair Display";
+  color: ${theme.mainFont};
+
+  @media (max-width: 1130px) {
+    font-size: 70px;
+  }
+  @media (max-width: 1000px) {
+    font-size: 60px;
+  }
+
+  @media (max-width: 830px) {
+    font-size: 50px;
+  }
 `;
 
 const AboutMainText = styled.p`
@@ -73,6 +83,15 @@ const AboutMainText = styled.p`
   font-weight: 400;
   line-height: 180%;
   margin: 20px 0 30px;
+
+  @media (max-width: 930px) {
+    margin: 10px 0 10px;
+  }
+
+  @media (max-width: 860px) {
+    font-size: 17px;
+    margin: 0px;
+  }
 `;
 
 const AboutMainButton = styled.button`
@@ -104,7 +123,6 @@ const PhotoContainer = styled.div`
 `;
 
 const MainBlock = styled.div`
-  top: 24%;
-  right: 35%;
   position: absolute;
+  top: 20%;
 `;

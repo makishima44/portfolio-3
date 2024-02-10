@@ -27,7 +27,7 @@ export const Contacts = () => {
   return (
     <StyledContacts>
       <Contrainer>
-        <FlexWrapper justify="space-between">
+        <FlexWrapper justify="space-between" wrap="wrap">
           {" "}
           <SocialContacts>
             <SocialTitle>

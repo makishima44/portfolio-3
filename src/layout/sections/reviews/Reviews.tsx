@@ -17,7 +17,7 @@ export const Reviews = () => {
     <StyledReviews>
       <Contrainer>
         {" "}
-        <FlexWrapper justify="space-between">
+        <ReviewsWrapper>
           <ReviewContainer>
             <ReviewPhotoContainer>
               <ReviewPhoto src={reviewPhoto} />
@@ -80,7 +80,7 @@ export const Reviews = () => {
               </StatisticsText>
             </StatisticsBlock>
           </StatisticsContainer>
-        </FlexWrapper>
+        </ReviewsWrapper>
       </Contrainer>
     </StyledReviews>
   );
@@ -91,25 +91,49 @@ const StyledReviews = styled.section`
   background: rgba(34, 42, 54, 0.95);
 `;
 
+const ReviewsWrapper = styled(FlexWrapper)`
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: 1118px) {
+    gap: 40px;
+    justify-content: center;
+  }
+
+  @media (max-width: 457px) {
+    justify-content: left;
+  }
+`;
+
 const ReviewContainer = styled.div`
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
+
+  @media (max-width: 924px) {
+    justify-content: center;
+  }
 `;
 
 const ReviewPhotoContainer = styled.div`
   width: 390px;
   height: 390px;
+
+  @media (max-width: 457px) {
+    width: 335px;
+    height: 375px;
+  }
 `;
 
 const ReviewPhoto = styled.img`
   width: 100%;
   height: 100%;
+  object-fit: cover;
 `;
 
 const ReviewTextContainer = styled.div`
-  width: 490px;
-  height: 390px;
-  padding-top: 45px;
+  max-width: 490px;
+  padding-top: 5px;
 `;
 
 const ReviewText = styled.p`
@@ -119,6 +143,10 @@ const ReviewText = styled.p`
   line-height: 180%;
   letter-spacing: 0%;
   color: ${theme.mainFont};
+
+  @media (max-width: 924px) {
+    padding-bottom: 20px;
+  }
 `;
 
 const ReviewLink = styled.a`

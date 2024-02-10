@@ -9,17 +9,20 @@ export const Experience = () => {
   return (
     <StyledExpirience>
       <Contrainer>
-        <FlexWrapper justify="space-between">
+        <FlexWrapper justify="space-between" wrap="wrap">
           {" "}
-          <ExpirienceTitle>
+          <ExpirienceContainer>
+            {" "}
             <ExpirienceTitleNumber>4 +</ExpirienceTitleNumber>
-            <br />
-            Years
-            <br />
-            Experience
-            <br />
-            Working
-          </ExpirienceTitle>
+            <ExpirienceTitle>
+              <br />
+              Years
+              <br />
+              Experience
+              <br />
+              Working
+            </ExpirienceTitle>
+          </ExpirienceContainer>
           <SpecializedContainer>
             <SpecializedTitle>
               Developer and Designer, specialized in
@@ -79,8 +82,15 @@ const StyledExpirience = styled.section`
   height: 100%;
 `;
 
+const ExpirienceContainer = styled.div`
+  @media (max-width: 1136px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
 const ExpirienceTitle = styled.h2`
-  padding-top: 90px;
   font-family: "Playfair Display";
   font-size: 40px;
   font-weight: 700;
@@ -89,11 +99,15 @@ const ExpirienceTitle = styled.h2`
 `;
 
 const ExpirienceTitleNumber = styled.span`
+  font-family: "Playfair Display";
   font-size: 100px;
   color: #676cdb;
 `;
 
-const SpecializedContainer = styled.div``;
+const SpecializedContainer = styled.div`
+  @media (max-width: 1130px) {
+  }
+`;
 
 const SpecializedTitle = styled.h2`
   text-align: center;
@@ -115,6 +129,7 @@ const SpecializedBlock = styled.div`
   padding-left: 30px;
   padding-bottom: 35px;
   color: #222a36;
+  w
 
   &:hover {
     background: rgb(103, 108, 219);
