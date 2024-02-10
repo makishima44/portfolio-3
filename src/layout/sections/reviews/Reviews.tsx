@@ -7,6 +7,11 @@ import { Contrainer } from "../../../components/Container";
 import { theme } from "../../../styles/Themes";
 import { font } from "../../../styles/Common";
 
+type StatisticTitlePropsType = {
+  fontSize: string;
+  color?: string;
+};
+
 export const Reviews = () => {
   return (
     <StyledReviews>
@@ -49,24 +54,30 @@ export const Reviews = () => {
           </ReviewContainer>
           <StatisticsContainer>
             <StatisticsBlock>
-              <StatisticsTitle>
+              <StatisticsText fontSize="30px">
                 Satisfaction
                 <br />
                 Clients
-              </StatisticsTitle>
-              <StatisticsNumber>100 %</StatisticsNumber>
+              </StatisticsText>
+              <StatisticsText fontSize="50px" color="#676cdb">
+                100 %
+              </StatisticsText>
             </StatisticsBlock>
             <StatisticsBlock>
-              <StatisticsTitle>
+              <StatisticsText fontSize="30px">
                 Clients On
                 <br />
                 Worldwide
-              </StatisticsTitle>
-              <StatisticsNumber>+ 80</StatisticsNumber>
+              </StatisticsText>
+              <StatisticsText fontSize="50px" color="#676cdb">
+                + 80
+              </StatisticsText>
             </StatisticsBlock>
             <StatisticsBlock>
-              <StatisticsTitle>Projects Done</StatisticsTitle>
-              <StatisticsNumber>743</StatisticsNumber>
+              <StatisticsText fontSize="30px">Projects Done</StatisticsText>
+              <StatisticsText fontSize="50px" color="#676cdb">
+                743
+              </StatisticsText>
             </StatisticsBlock>
           </StatisticsContainer>
         </FlexWrapper>
@@ -125,19 +136,11 @@ const StatisticsContainer = styled.div`
 
 const StatisticsBlock = styled.div``;
 
-const StatisticsTitle = styled.span`
+const StatisticsText = styled.span<StatisticTitlePropsType>`
   display: block;
   font-family: Playfair Display;
-  font-size: 30px;
   font-weight: 700;
   line-height: 120%;
-  color: ${theme.mainFont};
-`;
-
-const StatisticsNumber = styled.span`
-  font-family: Playfair Display;
-  font-size: 50px;
-  font-weight: 700;
-  line-height: 120%;
-  color: #676cdb;
+  font-size: ${(props) => props.fontSize};
+  color: ${(props) => props.color || "#FFFFFF"};
 `;
