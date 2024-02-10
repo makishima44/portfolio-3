@@ -71,7 +71,12 @@ export const Contacts = () => {
             </ContactBlock>
             <ContactButton>
               <a href="">Send</a>
-              <Icon iconId="arrow-right" />
+              <Icon
+                iconId="arrow-right"
+                height="30"
+                width="30"
+                viewBox="0 0 35 30"
+              />
             </ContactButton>
           </ContactBlockForm>
         </FlexWrapper>
@@ -81,6 +86,7 @@ export const Contacts = () => {
 };
 
 const StyledContacts = styled.section`
+  padding-top: 100px;
   background: rgb(0, 0, 0);
   display: flex;
   justify-content: space-between;
@@ -89,6 +95,10 @@ const StyledContacts = styled.section`
 const SocialContacts = styled.div``;
 
 const SocialTitle = styled.h2`
+  margin-bottom: 50px;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 120%;
   color: ${theme.mainFont};
 `;
 
@@ -97,17 +107,50 @@ const SocialLinksBlock = styled.div`
   gap: 50px;
 `;
 
-const ContactBlockForm = styled.form``;
+const ContactBlockForm = styled.form`
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 120%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+`;
 
 const ContactBlock = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
-const ContactInput = styled.input``;
+const ContactInput = styled.input`
+  width: 500px;
+  height: 60px;
+  background-color: black;
+  border: none;
+  border-bottom: 1px solid ${theme.mainFont};
+  color: ${theme.mainFont};
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid ${theme.mainFont};
+  }
+
+  resize: none;
+`;
 
 const ContactLabel = styled.label`
   color: ${theme.mainFont};
 `;
 
-const ContactButton = styled.button``;
+const ContactButton = styled.button`
+  width: 150px;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 120%;
+  background-color: transparent;
+  color: #676cdb;
+
+  a {
+    color: #676cdb;
+    padding-right: 45px;
+  }
+`;
