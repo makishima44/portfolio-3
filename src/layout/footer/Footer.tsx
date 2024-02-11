@@ -24,6 +24,10 @@ const FooterTitle = styled.h3`
   font-weight: 500;
   line-height: 180%;
   letter-spacing: 0.3px;
+
+  @media (max-width: 500px) {
+    font-size: 16px;
+  }
 `;
 
 const FooterText = styled.span`
