@@ -137,7 +137,7 @@ const ContactBlock = styled.div`
 `;
 
 const ContactInput = styled.input`
-  font-size: 15px;
+  font-size: 16px;
   width: 500px;
   height: 60px;
   background-color: black;

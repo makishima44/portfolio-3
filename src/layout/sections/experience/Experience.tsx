@@ -4,32 +4,35 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Icon } from "../../../components/icon/Icon";
 import { Contrainer } from "../../../components/Container";
 import { theme } from "../../../styles/Themes";
+import { TitleStyled } from "../../../components/title/TitleStyled";
+import { font } from "../../../styles/Common";
 
 export const Experience = () => {
   return (
-    <StyledExpirience>
+    <StyledExperience>
       <Contrainer>
-        <FlexWrapper justify="space-between" wrap="wrap">
+        <ExperienceWrapper>
           {" "}
-          <ExpirienceContainer>
+          <ExperienceContainer>
             {" "}
-            <ExpirienceTitleNumber>4 +</ExpirienceTitleNumber>
-            <ExpirienceTitle>
-              <br />
+            <TitleStyled fontSize="100px" color="#676cdb" lineHeight="0.7">
+              4 +
+            </TitleStyled>
+            <ExperienceTitle>
               Years
               <br />
               Experience
               <br />
               Working
-            </ExpirienceTitle>
-          </ExpirienceContainer>
+            </ExperienceTitle>
+          </ExperienceContainer>
           <SpecializedContainer>
             <SpecializedTitle>
               Developer and Designer, specialized in
               <br /> UI/UX and Web Developer
             </SpecializedTitle>
 
-            <FlexWrapper gap="15px" wrap="wrap">
+            <SpecializedWrapper>
               <SpecializedBlock>
                 <Icon
                   iconId="computer"
@@ -68,55 +71,74 @@ export const Experience = () => {
                   <br /> Designer
                 </SpecializedText>
               </SpecializedBlock>
-            </FlexWrapper>
+            </SpecializedWrapper>
           </SpecializedContainer>
-        </FlexWrapper>
+        </ExperienceWrapper>
       </Contrainer>
-    </StyledExpirience>
+    </StyledExperience>
   );
 };
 
-const StyledExpirience = styled.section`
+const StyledExperience = styled.section`
   padding: 100px 0;
   background: rgb(34, 42, 54);
   height: 100%;
 `;
 
-const ExpirienceContainer = styled.div`
+const ExperienceWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
   @media (max-width: 1136px) {
-    display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 50px;
   }
 `;
 
-const ExpirienceTitle = styled.h2`
-  font-family: "Playfair Display";
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 180%;
-  color: ${theme.mainFont};
+const ExperienceContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @media (max-width: 1136px) {
+    flex-direction: row;
+    gap: 25px;
+  }
 `;
 
-const ExpirienceTitleNumber = styled.span`
-  font-family: "Playfair Display";
-  font-size: 100px;
-  color: #676cdb;
+const ExperienceTitle = styled.h2`
+  ${font({
+    family: "Playfair Display",
+    weight: 700,
+    Fmax: 40,
+    Fmin: 26,
+    lineHeight: 1.8,
+  })};
 `;
 
-const SpecializedContainer = styled.div`
-  @media (max-width: 1130px) {
+const SpecializedContainer = styled.div``;
+
+const SpecializedWrapper = styled.div`
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+
+  @media (max-width: 1136px) {
+    justify-content: center;
   }
 `;
 
 const SpecializedTitle = styled.h2`
   text-align: center;
-  font-family: Poppins;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 180%;
-  color: ${theme.mainFont};
   margin-bottom: 20px;
+
+  ${font({
+    weight: 700,
+    Fmax: 40,
+    Fmin: 26,
+    lineHeight: 1.8,
+  })};
 `;
 
 const SpecializedBlock = styled.div`
@@ -129,18 +151,21 @@ const SpecializedBlock = styled.div`
   padding-left: 30px;
   padding-bottom: 35px;
   color: #222a36;
-  w
 
   &:hover {
     background: rgb(103, 108, 219);
     color: ${theme.mainFont};
   }
+
+  @media (max-width: 624px) {
+    max-width: 335px;
+    max-height: 176px;
+  }
 `;
 
 const SpecializedText = styled.span`
-  font-size: 20px;
   font-weight: 700;
+  font-size: 20px;
   line-height: 120%;
-  letter-spacing: 0%;
   padding-top: 10px;
 `;

@@ -6,11 +6,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Contrainer } from "../../../components/Container";
 import { theme } from "../../../styles/Themes";
 import { font } from "../../../styles/Common";
-
-type StatisticTitlePropsType = {
-  fontSize: string;
-  color?: string;
-};
+import { TitleStyled } from "../../../components/title/TitleStyled";
 
 export const Reviews = () => {
   return (
@@ -54,30 +50,30 @@ export const Reviews = () => {
           </ReviewContainer>
           <StatisticsContainer>
             <StatisticsBlock>
-              <StatisticsText fontSize="30px">
+              <TitleStyled fontSize="30px">
                 Satisfaction
                 <br />
                 Clients
-              </StatisticsText>
-              <StatisticsText fontSize="50px" color="#676cdb">
+              </TitleStyled>
+              <TitleStyled fontSize="50px" color="#676cdb">
                 100 %
-              </StatisticsText>
+              </TitleStyled>
             </StatisticsBlock>
             <StatisticsBlock>
-              <StatisticsText fontSize="30px">
+              <TitleStyled fontSize="30px">
                 Clients On
                 <br />
                 Worldwide
-              </StatisticsText>
-              <StatisticsText fontSize="50px" color="#676cdb">
+              </TitleStyled>
+              <TitleStyled fontSize="50px" color="#676cdb">
                 + 80
-              </StatisticsText>
+              </TitleStyled>
             </StatisticsBlock>
             <StatisticsBlock>
-              <StatisticsText fontSize="30px">Projects Done</StatisticsText>
-              <StatisticsText fontSize="50px" color="#676cdb">
+              <TitleStyled fontSize="30px">Projects Done</TitleStyled>
+              <TitleStyled fontSize="50px" color="#676cdb">
                 743
-              </StatisticsText>
+              </TitleStyled>
             </StatisticsBlock>
           </StatisticsContainer>
         </ReviewsWrapper>
@@ -89,9 +85,14 @@ export const Reviews = () => {
 const StyledReviews = styled.section`
   padding: 100px 0;
   background: rgba(34, 42, 54, 0.95);
+
+  @media (max-width: 929px) {
+    padding-top: 40px;
+  }
 `;
 
-const ReviewsWrapper = styled(FlexWrapper)`
+const ReviewsWrapper = styled.div`
+  display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 
@@ -137,12 +138,12 @@ const ReviewTextContainer = styled.div`
 `;
 
 const ReviewText = styled.p`
-  font-family: Poppins;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 180%;
-  letter-spacing: 0%;
-  color: ${theme.mainFont};
+  ${font({
+    weight: 700,
+    Fmax: 20,
+    Fmin: 20,
+    lineHeight: 1.8,
+  })};
 
   @media (max-width: 924px) {
     padding-bottom: 20px;
@@ -162,13 +163,8 @@ const StatisticsContainer = styled.div`
   gap: 30px;
 `;
 
-const StatisticsBlock = styled.div``;
-
-const StatisticsText = styled.span<StatisticTitlePropsType>`
-  display: block;
-  font-family: Playfair Display;
-  font-weight: 700;
-  line-height: 120%;
-  font-size: ${(props) => props.fontSize};
-  color: ${(props) => props.color || "#FFFFFF"};
+const StatisticsBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 `;
