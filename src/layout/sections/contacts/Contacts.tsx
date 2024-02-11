@@ -4,6 +4,7 @@ import { Icon } from "../../../components/icon/Icon";
 import { theme } from "../../../styles/Themes";
 import { Contrainer } from "../../../components/Container";
 import { FlexWrapper } from "../../../components/FlexWrapper";
+import { font } from "../../../styles/Common";
 
 const SocialLinks = [
   {
@@ -27,7 +28,7 @@ export const Contacts = () => {
   return (
     <StyledContacts>
       <Contrainer>
-        <FlexWrapper justify="space-between" wrap="wrap">
+        <ContactWrapper>
           {" "}
           <SocialContacts>
             <SocialTitle>
@@ -79,7 +80,7 @@ export const Contacts = () => {
               />
             </ContactButton>
           </ContactBlockForm>
-        </FlexWrapper>
+        </ContactWrapper>
       </Contrainer>
     </StyledContacts>
   );
@@ -92,14 +93,28 @@ const StyledContacts = styled.section`
   justify-content: space-between;
 `;
 
+const ContactWrapper = styled(FlexWrapper)`
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: 967px) {
+    justify-content: center;
+    gap: 20px;
+  }
+`;
+
 const SocialContacts = styled.div``;
 
 const SocialTitle = styled.h2`
   margin-bottom: 50px;
-  font-size: 100px;
-  font-weight: 700;
-  line-height: 120%;
   color: ${theme.mainFont};
+
+  ${font({
+    weight: 700,
+    Fmax: 100,
+    Fmin: 50,
+    lineHeight: 1.2,
+  })};
 `;
 
 const SocialLinksBlock = styled.div`
@@ -122,6 +137,7 @@ const ContactBlock = styled.div`
 `;
 
 const ContactInput = styled.input`
+  font-size: 15px;
   width: 500px;
   height: 60px;
   background-color: black;
@@ -135,6 +151,10 @@ const ContactInput = styled.input`
   }
 
   resize: none;
+
+  @media (max-width: 530px) {
+    max-width: 335px;
+  }
 `;
 
 const ContactLabel = styled.label`
@@ -152,5 +172,10 @@ const ContactButton = styled.button`
   a {
     color: #676cdb;
     padding-right: 45px;
+  }
+
+  &:hover {
+    background-color: ${theme.mainFont};
+    border-radius: 10px;
   }
 `;
