@@ -8,7 +8,7 @@ import { MobileMenu } from "./mobileHeader/MobileMenu";
 
 export const Header: React.FC = () => {
   const [width, setwidth] = React.useState(window.innerWidth);
-  const breakpoint = 768;
+  const breakpoint = 769;
 
   React.useEffect(() => {
     const handleWindowResize = () => setwidth(window.innerWidth);
@@ -52,7 +52,7 @@ const StyledButton = styled.button`
     background-color: rgb(103, 108, 219);
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `;

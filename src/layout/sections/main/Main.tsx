@@ -10,7 +10,7 @@ import { font } from "../../../styles/Common";
 export const Main = () => {
   return (
     <StyledMain>
-      <FlexWrapper justify="space-between">
+      <MainWrapper>
         <AboutContainer>
           {" "}
           <MainBlock>
@@ -50,7 +50,7 @@ export const Main = () => {
         <PhotoContainer>
           <MainPhoto src={mainPhoto} />
         </PhotoContainer>
-      </FlexWrapper>
+      </MainWrapper>
     </StyledMain>
   );
 };
@@ -61,21 +61,40 @@ const StyledMain = styled.section`
   position: relative;
 `;
 
+const MainWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    gap: 70px;
+  }
+`;
+
 const AboutMainTitle = styled.h1`
-  font-size: 90px;
-  font-family: "Playfair Display";
-  color: ${theme.mainFont};
+  ${font({
+    family: "Playfair Display",
+    weight: 700,
+    Fmax: 90,
+    Fmin: 20,
+  })};
 `;
 
 const AboutMainText = styled.p`
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 180%;
+  ${font({
+    weight: 400,
+    Fmax: 20,
+    Fmin: 13,
+    lineHeight: 1.8,
+    color: "rgba(255, 255, 255, 0.5)",
+  })};
+
   margin: 20px 0 30px;
 `;
 
 const ButtonContainer = styled.div``;
+
 const AboutMainButton = styled.button`
   width: 180px;
   height: 64px;
@@ -87,10 +106,18 @@ const AboutMainButton = styled.button`
     line-height: 120%;
     margin-left: 10px;
     color: ${theme.mainFont};
+
+    @media (max-width: 935px) {
+      font-size: 15px;
+    }
   }
 
   &:hover {
     background-color: #676cdb;
+  }
+
+  @media (max-width: 935px) {
+    width: 120px;
   }
 `;
 
@@ -102,13 +129,28 @@ const MainPhoto = styled.img`
 
 const PhotoContainer = styled.div`
   width: 50%;
+  min-width: 360px;
+  @media (max-width: 768px) {
+    order: 1;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    order: 1;
+    width: 100%;
+  }
 `;
 
 const AboutContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 100px;
+
+  @media (max-width: 768px) {
+    order: 2;
+    width: 100%;
+    padding-bottom: 20px;
+  }
 `;
 
 const MainBlock = styled.div`
@@ -118,6 +160,5 @@ const MainBlock = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 50%;
-
   z-index: 2;
 `;
