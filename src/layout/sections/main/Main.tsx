@@ -58,7 +58,6 @@ export const Main = () => {
 const StyledMain = styled.section`
   min-height: 100hv;
   background: rgba(34, 42, 54, 0.95);
-  position: relative;
 `;
 
 const MainWrapper = styled.div`
@@ -69,6 +68,31 @@ const MainWrapper = styled.div`
   @media (max-width: 768px) {
     justify-content: center;
     gap: 70px;
+  }
+`;
+
+const AboutContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    order: 2;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+`;
+
+const MainBlock = styled.div`
+  white-space: nowrap;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  z-index: 2;
+
+  @media (max-width: 768px) {
   }
 `;
 
@@ -89,8 +113,6 @@ const AboutMainText = styled.p`
     lineHeight: 1.8,
     color: "rgba(255, 255, 255, 0.5)",
   })};
-
-  margin: 20px 0 30px;
 `;
 
 const ButtonContainer = styled.div``;
@@ -117,7 +139,21 @@ const AboutMainButton = styled.button`
   }
 
   @media (max-width: 935px) {
-    width: 120px;
+    width: 145px;
+  }
+
+  @media (max-width: 600px) {
+    width: 110px;
+  }
+`;
+
+const PhotoContainer = styled.div`
+  width: 50%;
+  min-width: 360px;
+
+  @media (max-width: 768px) {
+    order: 1;
+    width: 100%;
   }
 `;
 
@@ -125,40 +161,4 @@ const MainPhoto = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-`;
-
-const PhotoContainer = styled.div`
-  width: 50%;
-  min-width: 360px;
-  @media (max-width: 768px) {
-    order: 1;
-    width: 100%;
-  }
-
-  @media (max-width: 768px) {
-    order: 1;
-    width: 100%;
-  }
-`;
-
-const AboutContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @media (max-width: 768px) {
-    order: 2;
-    width: 100%;
-    padding-bottom: 20px;
-  }
-`;
-
-const MainBlock = styled.div`
-  white-space: nowrap;
-  overflow: visible;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 50%;
-  z-index: 2;
 `;

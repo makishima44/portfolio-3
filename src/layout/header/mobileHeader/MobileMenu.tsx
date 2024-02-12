@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { css, styled } from "styled-components";
-import { Menu } from "../../../components/menu/Menu";
 import MenuBtn from "./../../../assets/images/menu-svgrepo-com.svg";
+import { theme } from "../../../styles/Themes";
 
 export const MobileMenu: React.FC = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -14,7 +14,17 @@ export const MobileMenu: React.FC = () => {
         <BurgerButtonIcon src={MenuBtn} />
       </BurgerButton>
       <MobileMenuPopop isOpen={menuIsOpen} onClick={() => setMenuIsOpen(false)}>
-        <Menu />
+        <ul>
+          <li>
+            <a href="">Home</a>
+          </li>
+          <li>
+            <a href="">About</a>
+          </li>
+          <li>
+            <a href="">Services</a>
+          </li>
+        </ul>
       </MobileMenuPopop>
     </StyledMobileMenu>
   );
@@ -40,11 +50,21 @@ const MobileMenuPopop = styled.div<{ isOpen: boolean }>`
 
   ul {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     transition: 0.8s ease-in-out;
+
+    & a {
+      color: ${theme.mainFont};
+      font-size: 20px;
+      font-weight: 500;
+
+      &:hover {
+        background-color: rgb(103, 108, 219);
+      }
+    }
   }
 
   ${(props) =>
@@ -52,7 +72,7 @@ const MobileMenuPopop = styled.div<{ isOpen: boolean }>`
     css<{ isOpen: boolean }>`
       transform: translateY(0);
       & ul {
-        gap: 30px;
+        gap: 70px;
       }
     `}
 `;
@@ -63,7 +83,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   right: -90px;
   width: 200px;
   height: 100px;
-  z-index: 5;
+  z-index: 4;
   background-color: transparent;
 `;
 

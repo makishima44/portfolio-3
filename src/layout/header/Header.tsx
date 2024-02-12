@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
-import { Menu } from "../../components/menu/Menu";
+import { DesktopMenu } from "./desktopMenu/DesktopMenu";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { theme } from "../../styles/Themes";
 import { Contrainer } from "../../components/Container";
@@ -21,7 +21,7 @@ export const Header: React.FC = () => {
       <Contrainer>
         <FlexWrapper justify="space-between" align="center">
           <Logo>Logo</Logo>
-          {width < breakpoint ? <MobileMenu /> : <Menu />}
+          {width < breakpoint ? <MobileMenu /> : <DesktopMenu />}
           <StyledButton>
             <a href="">Contact Me</a>
           </StyledButton>
@@ -38,10 +38,20 @@ const StyledHeader = styled.header`
   left: 0;
   z-index: 1000;
 `;
+
+const Logo = styled.h2`
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 45px;
+  color: ${theme.mainFont};
+  z-index: 4;
+`;
+
 const StyledButton = styled.button`
   width: 160px;
   height: 50px;
   background-color: transparent;
+
   a {
     color: ${theme.mainFont};
     font-size: 20px;
@@ -55,11 +65,4 @@ const StyledButton = styled.button`
   @media (max-width: 768px) {
     display: none;
   }
-`;
-
-const Logo = styled.h2`
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 45px;
-  color: ${theme.mainFont};
 `;

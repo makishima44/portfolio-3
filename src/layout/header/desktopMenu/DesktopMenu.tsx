@@ -1,8 +1,8 @@
 import React from "react";
 import { styled } from "styled-components";
-import { theme } from "../../styles/Themes";
+import { theme } from "../../../styles/Themes";
 
-export const Menu = () => {
+export const DesktopMenu = () => {
   return (
     <NavMenu>
       <ul>
@@ -16,6 +16,7 @@ export const Menu = () => {
           <a href="">Services</a>
         </li>
       </ul>
+    
     </NavMenu>
   );
 };
@@ -37,3 +38,4 @@ const NavMenu = styled.nav`
     }
   }
 `;
+
