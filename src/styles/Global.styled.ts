@@ -18,6 +18,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: brown;
+  background: rgba(34, 42, 54, 0.95);
 }
 
 a {

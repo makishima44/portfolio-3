@@ -10,13 +10,8 @@ import { font } from "../../../styles/Common";
 export const Main = () => {
   return (
     <StyledMain>
-      <FlexWrapper justify="space-between" wrap="wrap">
-        <BGroundBlock></BGroundBlock>
-        <PhotoContainer>
-          <MainPhoto src={mainPhoto} />
-        </PhotoContainer>
-
-        <Contrainer>
+      <FlexWrapper justify="space-between">
+        <AboutContainer>
           {" "}
           <MainBlock>
             <AboutMainTitle>
@@ -29,21 +24,32 @@ export const Main = () => {
               <br /> Indonesia who loves to craft attractive
               <br /> design experiences for the web.
             </AboutMainText>
-            <AboutMainButton>
-              <Icon iconId="mail" height="20" width="20" viewBox="0 0 20 20" />
-              <a href="">Email me</a>
-            </AboutMainButton>
-            <AboutMainButton>
-              <Icon
-                iconId="download"
-                height="20"
-                width="20"
-                viewBox="0 0 20 20"
-              />
-              <a href="">Download CV</a>
-            </AboutMainButton>
+            <ButtonContainer>
+              <AboutMainButton>
+                <Icon
+                  iconId="mail"
+                  height="20"
+                  width="20"
+                  viewBox="0 0 20 20"
+                />
+                <a href="">Email me</a>
+              </AboutMainButton>
+              <AboutMainButton>
+                <Icon
+                  iconId="download"
+                  height="20"
+                  width="20"
+                  viewBox="0 0 20 20"
+                />
+                <a href="">Download CV</a>
+              </AboutMainButton>
+            </ButtonContainer>
           </MainBlock>
-        </Contrainer>
+        </AboutContainer>
+
+        <PhotoContainer>
+          <MainPhoto src={mainPhoto} />
+        </PhotoContainer>
       </FlexWrapper>
     </StyledMain>
   );
@@ -51,30 +57,14 @@ export const Main = () => {
 
 const StyledMain = styled.section`
   min-height: 100hv;
-
-  position: relative;
-`;
-
-const BGroundBlock = styled.div`
-  width: 50%;
   background: rgba(34, 42, 54, 0.95);
+  position: relative;
 `;
 
 const AboutMainTitle = styled.h1`
   font-size: 90px;
   font-family: "Playfair Display";
   color: ${theme.mainFont};
-
-  @media (max-width: 1130px) {
-    font-size: 70px;
-  }
-  @media (max-width: 1000px) {
-    font-size: 60px;
-  }
-
-  @media (max-width: 830px) {
-    font-size: 50px;
-  }
 `;
 
 const AboutMainText = styled.p`
@@ -83,17 +73,9 @@ const AboutMainText = styled.p`
   font-weight: 400;
   line-height: 180%;
   margin: 20px 0 30px;
-
-  @media (max-width: 930px) {
-    margin: 10px 0 10px;
-  }
-
-  @media (max-width: 860px) {
-    font-size: 17px;
-    margin: 0px;
-  }
 `;
 
+const ButtonContainer = styled.div``;
 const AboutMainButton = styled.button`
   width: 180px;
   height: 64px;
@@ -122,7 +104,20 @@ const PhotoContainer = styled.div`
   width: 50%;
 `;
 
+const AboutContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 100px;
+`;
+
 const MainBlock = styled.div`
-  position: absolute;
-  top: 20%;
+  white-space: nowrap;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+
+  z-index: 2;
 `;
