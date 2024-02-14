@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { styled } from "styled-components";
-import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Icon } from "../../../components/icon/Icon";
 import { Contrainer } from "../../../components/Container";
 import { theme } from "../../../styles/Themes";
@@ -9,7 +8,7 @@ import { font } from "../../../styles/Common";
 
 export const Experience = () => {
   return (
-    <StyledExperience>
+    <StyledExperience id="experience">
       <Contrainer>
         <ExperienceWrapper>
           {" "}

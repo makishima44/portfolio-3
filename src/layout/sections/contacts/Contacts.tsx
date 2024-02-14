@@ -26,7 +26,7 @@ const SocialLinks = [
 
 export const Contacts = () => {
   return (
-    <StyledContacts>
+    <StyledContacts id="contact">
       <Contrainer>
         <ContactWrapper>
           {" "}

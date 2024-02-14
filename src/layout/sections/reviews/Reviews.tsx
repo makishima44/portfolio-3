@@ -10,7 +10,7 @@ import { TitleStyled } from "../../../components/title/TitleStyled";
 
 export const Reviews = () => {
   return (
-    <StyledReviews>
+    <StyledReviews id="reviews">
       <Contrainer>
         {" "}
         <ReviewsWrapper>

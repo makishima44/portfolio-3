@@ -2,14 +2,12 @@ import React from "react";
 import { styled } from "styled-components";
 import { Icon } from "../../../components/icon/Icon";
 import mainPhoto from "./../../../assets/images/Rectangle 3.jpeg";
-import { FlexWrapper } from "../../../components/FlexWrapper";
-import { Contrainer } from "../../../components/Container";
 import { theme } from "../../../styles/Themes";
 import { font } from "../../../styles/Common";
 
 export const Main = () => {
   return (
-    <StyledMain>
+    <StyledMain id="main">
       <MainWrapper>
         <AboutContainer>
           {" "}

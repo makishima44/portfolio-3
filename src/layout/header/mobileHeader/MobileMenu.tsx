@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { css, styled } from "styled-components";
 import MenuBtn from "./../../../assets/images/menu-svgrepo-com.svg";
 import { theme } from "../../../styles/Themes";
+import { Link } from "react-scroll";
 
 export const MobileMenu: React.FC = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -16,13 +17,24 @@ export const MobileMenu: React.FC = () => {
       <MobileMenuPopop isOpen={menuIsOpen} onClick={() => setMenuIsOpen(false)}>
         <ul>
           <li>
-            <a href="">Home</a>
+            <Link smooth={true} to="main">
+              Home
+            </Link>
           </li>
           <li>
-            <a href="">About</a>
+            <Link smooth={true} to="experience">
+              About
+            </Link>
           </li>
           <li>
-            <a href="">Services</a>
+            <Link smooth={true} to="reviews">
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link smooth={true} to="contact">
+              Contact
+            </Link>
           </li>
         </ul>
       </MobileMenuPopop>

@@ -1,22 +1,33 @@
 import React from "react";
 import { styled } from "styled-components";
 import { theme } from "../../../styles/Themes";
+import { Link } from "react-scroll";
 
 export const DesktopMenu = () => {
   return (
     <NavMenu>
       <ul>
         <li>
-          <a href="">Home</a>
+          <Link smooth={true} to="main">
+            Home
+          </Link>
         </li>
         <li>
-          <a href="">About</a>
+          <Link smooth={true} to="experience">
+            About
+          </Link>
         </li>
         <li>
-          <a href="">Services</a>
+          <Link smooth={true} to="reviews">
+            Services
+          </Link>
+        </li>
+        <li>
+          <Link smooth={true} to="contact">
+            Contact
+          </Link>
         </li>
       </ul>
-    
     </NavMenu>
   );
 };
@@ -38,4 +49,3 @@ const NavMenu = styled.nav`
     }
   }
 `;
-
