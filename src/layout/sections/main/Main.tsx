@@ -4,6 +4,7 @@ import { Icon } from "../../../components/icon/Icon";
 import mainPhoto from "./../../../assets/images/Rectangle 3.jpeg";
 import { theme } from "../../../styles/Themes";
 import { font } from "../../../styles/Common";
+import Typewriter from "typewriter-effect";
 
 export const Main = () => {
   return (

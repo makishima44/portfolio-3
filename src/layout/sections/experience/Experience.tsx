@@ -5,6 +5,7 @@ import { Contrainer } from "../../../components/Container";
 import { theme } from "../../../styles/Themes";
 import { TitleStyled } from "../../../components/title/TitleStyled";
 import { font } from "../../../styles/Common";
+import Typewriter from "typewriter-effect";
 
 export const Experience = () => {
   return (
@@ -28,7 +29,13 @@ export const Experience = () => {
           <SpecializedContainer>
             <SpecializedTitle>
               Developer and Designer, specialized in
-              <br /> UI/UX and Web Developer
+              <Typewriter
+                options={{
+                  strings: [" UI/UX and Web Developer"],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
             </SpecializedTitle>
 
             <SpecializedWrapper>
