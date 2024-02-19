@@ -28,7 +28,7 @@ export const Experience = () => {
           </ExperienceContainer>
           <SpecializedContainer>
             <SpecializedTitle>
-              Developer and Designer, specialized in
+              Developer and Designer, specialized s in
               <Typewriter
                 options={{
                   strings: [" UI/UX and Web Developer"],
